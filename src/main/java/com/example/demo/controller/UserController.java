@@ -32,6 +32,11 @@ public class UserController {
     userService.delete(id);
   }
 
-  @GetMapping("/userList")
-  public List<UserModel> getAll() {return UserService.findAll();}
+//  @GetMapping("/userList")
+//  @RequestMapping(method = RequestMethod.GET, params= {"pageNumber", "pageSize"})
+//  public List<UserModel> findByPage(@RequestParam(value = "pageNumber") int pageNumber, @RequestParam(value = "pageSize") int pageSize) {
+//    if (pageNumber && pageSize) {
+//
+//    }
+//  }
 }

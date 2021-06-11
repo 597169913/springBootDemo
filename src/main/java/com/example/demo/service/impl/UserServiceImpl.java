@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -29,5 +30,8 @@ public class UserServiceImpl implements UserService {
     @Override
     public void delete(String id) {
         userDao.deleteById(id);
+    }
+    public List<UserModel> findAll() {
+        return userDao.findAll();
     }
 }
